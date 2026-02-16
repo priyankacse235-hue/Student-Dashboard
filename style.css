@@ -1,0 +1,92 @@
+/* Reset basic spacing */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    margin:0;
+    padding:0;
+}
+
+/* Main container feel */
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+/* App Title */
+#appTitle{
+    background:#2c3e50;
+    color:white;
+    width:100%;
+    text-align:center;
+    padding:15px 0;
+    margin:0;
+}
+
+/* Date Time */
+#dateTime{
+    margin:15px;
+    font-weight:bold;
+    color:#555;
+}
+
+/* Inputs */
+input, select{
+    padding:8px 10px;
+    margin:6px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:14px;
+}
+
+/* Focus effect */
+input:focus, select:focus{
+    outline:none;
+    border-color:#3498db;
+    box-shadow:0 0 4px rgba(52,152,219,0.5);
+}
+
+/* Buttons */
+button{
+    padding:8px 14px;
+    margin:6px;
+    border:none;
+    border-radius:6px;
+    background:#3498db;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+button:hover{
+    background:#217dbb;
+}
+
+/* Task box style */
+#tasksContainer div{
+    background:white;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    width:320px;
+}
+
+/* List Section */
+#listSection{
+    background:white;
+    padding:15px;
+    margin-top:20px;
+    border-radius:8px;
+    width:340px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Task list items */
+#taskList li{
+    margin:6px 0;
+    padding:6px;
+    background:#ecf0f1;
+    border-radius:4px;
+}
