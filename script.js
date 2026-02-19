@@ -76,7 +76,6 @@ function watchTime(){
             input.dataset.started = "yes";
         }
     });
-
     ends.forEach((input,index)=>{
 
         if(input.value === current && !input.dataset.ended){
@@ -85,6 +84,16 @@ function watchTime(){
             input.dataset.ended = "yes";
         }
     });
+// jab task complete ho jae to list green ho jae
+    let listItems = document.querySelectorAll("#taskList li");
+
+listItems.forEach((item)=>{
+    if(item.dataset.endtime === current && !item.dataset.completed){
+        item.style.color = "green";
+        item.style.fontWeight = "bold";
+        item.dataset.completed = "yes";
+    }
+});
 }
 
 setInterval(watchTime, 1000);
@@ -110,8 +119,32 @@ function addToList(btn){
     // list me item add karna
     let li = document.createElement("li");
     li.innerText = task + " (" + start + " - " + end + ")";
+     li.dataset.endtime=end;//end time store kar diya
 
     document.getElementById("taskList").appendChild(li);
+    btn.disabled=true;// done button ek hi bar kam kregi
 }
 
-               
+
+
+// reset tasks
+function resetAll(){
+
+    // Name input clear
+    document.getElementById("nameInput").value = "";
+
+    // Task count reset
+    document.getElementById("taskCount").value = "";
+
+    // Tasks container clear
+    document.getElementById("tasksContainer").innerHTML = "";
+
+    // Task list clear
+    document.getElementById("taskList").innerHTML = "";
+
+    // List section hide
+    document.getElementById("listSection").style.display = "none";
+
+}
+
+
